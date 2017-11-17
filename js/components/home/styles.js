@@ -12,8 +12,14 @@ export default {
   },
   text: {
     fontSize: 20,
-    marginBottom: 15,
+    marginBottom: 10,
     alignItems: 'center',
+  },
+  details_text: {
+    fontSize: 18,
+    marginBottom: 1,
+    alignItems: 'center',
+    color: '#ccc',
   },
   mt: {
     marginTop: 18,

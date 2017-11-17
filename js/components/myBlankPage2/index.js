@@ -13,7 +13,7 @@ import {
   Body
 } from "native-base";
 
-class BlankPage2 extends Component {
+class MyBlankPage2 extends Component {
   static navigationOptions = {
     header: null
   };
@@ -29,7 +29,7 @@ class BlankPage2 extends Component {
           </Left>
 
           <Body>
-            <Title>Blank page</Title>
+            <Title>Blank page 2</Title>
           </Body>
 
           <Right>
@@ -44,7 +44,7 @@ class BlankPage2 extends Component {
 
         <Content padder>
           <Text>
-            My Blank Page
+            My Blank Page 2
           </Text>
         </Content>
       </Container>
@@ -52,4 +52,4 @@ class BlankPage2 extends Component {
   }
 }
 
-export default BlankPage2;
+export default MyBlankPage2;

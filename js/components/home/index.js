@@ -7,6 +7,11 @@ import { DrawerNavigator, NavigationActions } from "react-navigation";
 import {
   Container,
   Header,
+  View,
+  Image,
+  Thumbnail,
+  List,
+  ListItem,
   Title,
   Content,
   Text,
@@ -40,6 +45,17 @@ class Home extends Component {
 
   render() {
     console.log(DrawNav, "786785786");
+    var things = [];
+    for (var i = 0; i < 1000; i++) {
+      things.push(
+        <ListItem key={i}>
+          <Thumbnail size={80} source={ {uri: 'https://dummyimage.com/10'+i} } />
+            <View>
+              <Text>{i}</Text>
+            </View>
+        </ListItem>
+      )
+    }
     return (
       <Container style={styles.container}>
         <Header>
@@ -75,7 +91,7 @@ class Home extends Component {
           </Right>
         </Header>
         <Content>
-          <Grid style={styles.mt}>
+          {/*<Grid style={styles.mt}>
             {this.props.list.map((item, i) => (
               <Row key={i}>
                 <TouchableOpacity
@@ -89,7 +105,22 @@ class Home extends Component {
                 </TouchableOpacity>
               </Row>
             ))}
-          </Grid>
+          </Grid>*/}
+          {/*<List>
+            {this.props.list.map((item, i) => (
+              <ListItem key={i}
+                onPress={() =>
+                  this.props.navigation.navigate("BlankPage", {
+                    name: { item }, navName: 'ABC'
+                  })}>
+                  <View>
+                    <Text style={styles.text}>{item}</Text>
+                    <Text style={styles.details_text}>Details</Text>
+                  </View>
+              </ListItem>
+            ))}
+          </List>*/}
+          { things }
         </Content>
       </Container>
     );
